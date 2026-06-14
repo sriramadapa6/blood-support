@@ -1,0 +1,391 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ✅ BACKGROUND WITH BLOOD LAB IMAGE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a6001a, #2b0000);
+    min-height: 100vh;
+}
+.search-page {
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+        url("img/blood-lab.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+.ai-page {
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+        url("img/ai-match-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+.donor-page {
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.60)),
+        url("img/become.donor.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s, text-shadow 0.3s;
+    font-weight: 500;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.97);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+}
+
+/* Headers */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #a6001a;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.header p {
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: #a6001a;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(166, 0, 26, 0.1);
+}
+
+.form-group input:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Main Submit Button */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #a6001a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(166, 0, 26, 0.3);
+}
+
+.btn:hover:not(:disabled) { 
+    background: #ff4b2b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 75, 43, 0.4);
+}
+
+.btn:active:not(:disabled) { 
+    transform: scale(0.98); 
+}
+
+.btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ✅ OTP BUTTON STYLING */
+.btn-otp {
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-otp:hover:not(:disabled) {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+}
+
+.btn-otp:active:not(:disabled) {
+    transform: scale(0.96);
+}
+
+.btn-otp:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* OTP Verification Section */
+.otp-section {
+    background: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+    margin: 10px 0;
+}
+
+/* AI Machine Learning Results Box */
+.ai-result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f0f8ff;
+    border-left: 4px solid #0056b3;
+    border-radius: 8px;
+    display: none;
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 56, 179, 0.1);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Donor Results Cards */
+.donor-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.donor-card {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 5px solid #a6001a;
+    box-shadow: 0 4px 12px rgba(166, 0, 26, 0.1);
+    transition: all 0.3s;
+}
+
+.donor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(166, 0, 26, 0.2);
+}
+
+.donor-card h4 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.donor-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.donor-card strong {
+    color: #a6001a;
+    font-weight: 600;
+}
+
+/* Contact Button in Donor Cards */
+.btn-contact {
+    margin-top: 12px;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+.btn-contact:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(40, 167, 69, 0.3);
+}
+
+.btn-contact:active {
+    transform: scale(0.96);
+}
+
+/* AI Result Display */
+#ai-result {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Small text */
+small {
+    color: #777;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+        margin: 20px auto;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 8px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .form-group input, 
+    .form-group select {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn-otp {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .donor-card {
+        padding: 14px;
+    }
+
+    .donor-card h4 {
+        font-size: 16px;
+    }
+}
+

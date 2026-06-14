@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Support - Advanced AI Match</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+<body class="ai-page">
+
+    <nav>
+        <div class="logo">🩸 Blood Support</div>
+        <ul>
+            <li><a href="index.html">Search Donors</a></li>
+            <li><a href="smart-match.html" class="active">AI Smart Match</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Advanced AI Match</h1>
+            <p>Predict donor response probability using ML model.</p>
+        </div>
+
+        <form id="mlForm">
+            <div class="form-group">
+                <label>Distance from Hospital (km)</label>
+                <input type="number" id="distance" placeholder="e.g., 5" min="1" max="500" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Days Since Last Donation</label>
+                <input type="number" id="days" placeholder="e.g., 120" min="1" max="1000" required>
+            </div>
+
+            <div class="form-group">
+                <label>Donor's Past Reliability (%)</label>
+                <input type="number" id="reliability" placeholder="e.g., 80" min="0" max="100" required>
+                <small>How often they accepted requests in the past.</small>
+            </div>
+
+            <div class="form-group">
+                <label>Situation Urgency</label>
+                <select id="urgency" required>
+                    <option value="1">Routine (Level 1)</option>
+                    <option value="2">Urgent (Level 2)</option>
+                    <option value="3">Critical Emergency (Level 3)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">🤖 Predict Response Probability</button>
+        </form>
+
+        <div id="ai-result" class="ai-result-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
